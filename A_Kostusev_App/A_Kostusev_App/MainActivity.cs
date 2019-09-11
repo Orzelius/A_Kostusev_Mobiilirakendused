@@ -46,11 +46,11 @@ namespace A_Kostusev_App
 
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
+            Intent intent = new Intent(this, typeof(SecondActivity));
+
             View view = (View) sender;
             Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
                 .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
-
-            Intent intent = new Intent(this, typeof(SecondActivity));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

@@ -34,9 +34,10 @@ namespace A_Kostusev_App {
         private void EditText_TextChanged(object sender, Android.Text.TextChangedEventArgs e) {
             try {
                 int solution = Convert.ToInt32(dt.Compute(editText.Text.ToString(), "").ToString());
+                editText.Text = "=" + solution;
             }
             catch(Exception ex) {
-                editText.Text = "Err";
+                editText.Text = "Invalid syntax";
             }
         }
 
