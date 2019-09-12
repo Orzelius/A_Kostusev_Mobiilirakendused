@@ -14,38 +14,28 @@ namespace Hey_MbyThisWillWork
     public class MainActivity : AppCompatActivity
     {
 
+        Button calculatorButton;
+        Button[] colorButtons;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
-            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
+            calculatorButton = (Button)FindViewById(Resource.Id.calculator);
 
-            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            fab.Click += FabOnClick;
+            colorButtons[0] = (Button)FindViewById(Resource.Id.activities_button0);
+            colorButtons[1] = (Button)FindViewById(Resource.Id.activities_button1);
+            colorButtons[2] = (Button)FindViewById(Resource.Id.activities_button2);
+            colorButtons[3] = (Button)FindViewById(Resource.Id.activities_button3);
+
+
+            calculatorButton.Click += CalculatorButton_Click;
         }
 
-        public override bool OnCreateOptionsMenu(IMenu menu)
-        {
-            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
-            return true;
-        }
-
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            int id = item.ItemId;
-            if (id == Resource.Id.action_settings)
-            {
-                return true;
-            }
-
-            return base.OnOptionsItemSelected(item);
-        }
-
-        private void FabOnClick(object sender, EventArgs eventArgs)
-        {
+        private void CalculatorButton_Click(object sender, EventArgs e)
+        {            
+            //throw new NotImplementedException();
             Intent intent = new Intent(this, typeof(SecondActivity));
             //intent.PutExtra("DATA_PASS", txtdatapass.Text); //DATA_PASS is Identify the Value Pass variable  
             this.StartActivity(intent);
@@ -54,6 +44,7 @@ namespace Hey_MbyThisWillWork
             //Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
             //    .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
         }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
