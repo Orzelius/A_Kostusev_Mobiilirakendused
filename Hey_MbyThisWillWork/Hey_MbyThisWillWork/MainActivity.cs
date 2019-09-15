@@ -15,7 +15,7 @@ namespace Hey_MbyThisWillWork
     {
 
         Button calculatorButton;
-        Button[] colorButtons;
+        Button[] colorButtons = new Button[4];
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -40,22 +40,22 @@ namespace Hey_MbyThisWillWork
 
         private void ColorButtonClick3(object sender, EventArgs e)
         {
-            //StartActivity(typeof());
+            StartActivity(typeof(Color3));
         }
 
         private void ColorButtonClick2(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            StartActivity(typeof(Color2));
         }
 
         private void ColorButtonClick1(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            StartActivity(typeof(Color1));
         }
 
         private void ColorButtonClick0(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            StartActivity(typeof(Color0));
         }
 
         private void CalculatorButton_Click(object sender, EventArgs e)
