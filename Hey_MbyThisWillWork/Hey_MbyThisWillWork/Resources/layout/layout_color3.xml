@@ -15,7 +15,6 @@
 
         <TextView
             android:layout_weight="1"
-            android:textSize="28"
             android:text="Red"
             android:gravity="center"
             android:textColor="@android:color/black"
@@ -25,7 +24,6 @@
             android:id="@+id/textView1"/>
         <TextView
             android:layout_weight="1"
-            android:textSize="28"
             android:text="Orange"
             android:gravity="center"
             android:textColor="@android:color/black"
@@ -35,7 +33,6 @@
             android:id="@+id/textView2" />
         <TextView
             android:layout_weight="1"
-            android:textSize="28"
             android:gravity="center"
             android:text="Yellow"
             android:textColor="@android:color/black"
@@ -45,7 +42,6 @@
             android:id="@+id/textView3" />
         <TextView
             android:layout_weight="1"
-            android:textSize="28"
             android:gravity="center"
             android:text="Green"
             android:textColor="@android:color/black"
@@ -55,7 +51,6 @@
             android:id="@+id/textView4" />
         <TextView
             android:layout_weight="1"
-            android:textSize="28"
             android:gravity="center"
             android:text="Blue"
             android:textColor="@android:color/black"
@@ -65,7 +60,6 @@
             android:id="@+id/textView5" />
         <TextView
             android:layout_weight="1"
-            android:textSize="28"
             android:gravity="center"
             android:text="Indigo"
             android:textColor="@android:color/darker_gray"
@@ -75,7 +69,6 @@
             android:id="@+id/textView6" />
         <TextView
             android:layout_weight="1"
-            android:textSize="28"
             android:gravity="center"
             android:text="Violet"
             android:textColor="@android:color/black"

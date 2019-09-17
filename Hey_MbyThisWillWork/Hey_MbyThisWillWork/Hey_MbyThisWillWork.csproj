@@ -89,10 +89,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\layout_color0.xml" />
-    <AndroidResource Include="Resources\layout\layout_color1.xml" />
-    <AndroidResource Include="Resources\layout\layout_color2.xml" />
-    <AndroidResource Include="Resources\layout\layout_color3.xml" />
+    <AndroidResource Include="Resources\layout\layout_color0.xml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\layout_color1.xml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\layout_color2.xml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\layout_color3.xml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\SecondLayout.xml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
@@ -129,18 +141,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Colorful Activities Scripts\" />
+    <Folder Include="Resources\layout\color_layouts\" />
+    <Folder Include="Resources\layout\relative_rainbows\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout_color0.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout_color1.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout_color2.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout_color3.xml" />
+    <AndroidResource Include="Resources\layout\relative0.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
