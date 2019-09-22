@@ -26,12 +26,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/textView1" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <Button
                 android:text="0"
                 android:layout_width="0dp"
@@ -67,10 +65,75 @@
         </LinearLayout>
     </LinearLayout>
 
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="20px"
+            android:text="Relative text activities"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textViewRelative" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:text="0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/relative_activities_button0" />
+            <Button
+                android:text="1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/relative_activities_button1" />
+            <Button
+                android:text="2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/relative_activities_button2" />
+            <Button
+                android:text="3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/relative_activities_button3" />
+        </LinearLayout>
+    </LinearLayout>
 
-
-
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:id="@+id/linearLayout1" />
     
+    <Button
+        android:layout_marginTop="3dp"
+        android:text="Xamarin Essentials"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:padding="30px"
+        android:layout_marginBottom="10px"
+        android:id="@+id/xamarinEssentialsBtn" />
 
 </LinearLayout>
 
