@@ -35,21 +35,7 @@ namespace Hey_MbyThisWillWork.Scripts {
 
         private void Accelerometer_ShakeDetected(object sender, EventArgs e) {
             Random randonGen = new Random();
-            rl.BackgroundTintList = Color.FromArgb(randonGen.Next(255), randonGen.Next(255),
-            randonGen.Next(255));
-        }
-
-        static Random rand = new Random();
-        public static Color GetRandomColor() {
-            int hue = rand.Next(255);
-            Color color = Color.HSVToColor(
-                new[] {
-            hue,
-            1.0f,
-            1.0f,
-                }
-            );
-            return color;
+            //rl.BackgroundTintList = Color.FromArgb(randonGen.Next(255), randonGen.Next(255), randonGen.Next(255));
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults) {
