@@ -16,8 +16,9 @@ namespace Hey_MbyThisWillWork
 
         Button calculatorButton;
         Button xamarimEssentialsButton;
+        Button toolbarButton;
         Button[] colorButtons = new Button[4];
-        Button[] relativeColorButtons = new Button[4];
+        Button[] relativeColorButtons = new Button[3];
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -26,6 +27,7 @@ namespace Hey_MbyThisWillWork
 
             calculatorButton = (Button)FindViewById(Resource.Id.calculator);
             xamarimEssentialsButton = (Button)FindViewById(Resource.Id.xamarinEssentialsBtn);
+            toolbarButton = (Button)FindViewById(Resource.Id.toolbarBtn);
 
             
             colorButtons[0] = (Button)FindViewById(Resource.Id.activities_button0);
@@ -36,12 +38,10 @@ namespace Hey_MbyThisWillWork
             relativeColorButtons[0] = (Button)FindViewById(Resource.Id.relative_activities_button0);
             relativeColorButtons[1] = (Button)FindViewById(Resource.Id.relative_activities_button1);
             relativeColorButtons[2] = (Button)FindViewById(Resource.Id.relative_activities_button2);
-            relativeColorButtons[3] = (Button)FindViewById(Resource.Id.relative_activities_button3);
 
             relativeColorButtons[0].Click += Relative_Click0;
             relativeColorButtons[1].Click += Relative_Click1;
             relativeColorButtons[2].Click += Relative_Click2;
-            relativeColorButtons[3].Click += Relative_Click3;
 
             colorButtons[0].Click += ColorButtonClick0;
             colorButtons[1].Click += ColorButtonClick1;
@@ -50,26 +50,27 @@ namespace Hey_MbyThisWillWork
 
             calculatorButton.Click += CalculatorButton_Click;
             xamarimEssentialsButton.Click += XamarimEssentialsButton_Click;
+            toolbarButton.Click += ToolbarButton_Click;
+        }
+
+        private void ToolbarButton_Click(object sender, EventArgs e) {
+            StartActivity(typeof(Scripts.toolbar));
         }
 
         private void XamarimEssentialsButton_Click(object sender, EventArgs e) {
             StartActivity(typeof(Hey_MbyThisWillWork.Scripts.xamarinEssentials));
         }
 
-        private void Relative_Click3(object sender, EventArgs e) {
-            throw new NotImplementedException();
-        }
-
         private void Relative_Click2(object sender, EventArgs e) {
-            throw new NotImplementedException();
+            StartActivity(typeof(Rel2));
         }
 
         private void Relative_Click1(object sender, EventArgs e) {
-            throw new NotImplementedException();
+            StartActivity(typeof(Rel1));
         }
 
         private void Relative_Click0(object sender, EventArgs e) {
-            throw new NotImplementedException();
+            StartActivity(typeof(Rel0));
         }
 
         private void ColorButtonClick3(object sender, EventArgs e)

@@ -2,76 +2,90 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:background="@color/White"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
     <RelativeLayout
-        android:gravity="center_vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="30dp">
-        <LinearLayout
-            android:orientation="vertical"
-            android:gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_margin="20dp">
 
             <TextView
+                android:id="@id/textView1"
                 android:text="Red"
                 android:background="@color/Red"
                 android:textColor="@color/Black"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:padding="10px"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
+                android:id="@id/textView2"
                 android:layout_toLeftOf="@id/right_side"
                 android:text="Orange"
                 android:background="@color/Orange"
                 android:textColor="@color/Black"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:padding="10px"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" 
+                android:layout_below="@id/textView1"
+                android:layout_toRightOf="@id/textView1"/>
             <TextView
+                android:id="@id/textView3"
                 android:text="Yellow"
                 android:background="@color/Yellow"
                 android:textColor="@color/Black"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:padding="10px"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView2"
+                android:layout_toRightOf="@id/textView2"/>
             <TextView
+                android:id="@id/textView4"
                 android:text="Green"
                 android:background="@color/Green"
                 android:textColor="@color/Black"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:padding="10px"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView3"
+                android:layout_toRightOf="@id/textView3"/>
             <TextView
+                android:id="@id/textView5"
                 android:text="Blue"
                 android:background="@color/Blue"
                 android:textColor="@color/Black"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:padding="10px"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView4"
+                android:layout_toLeftOf="@id/textView4"/>
             <TextView
+                android:id="@id/textView6"
                 android:text="Indigo"
                 android:background="@color/Indigo"
                 android:textColor="@color/Black"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:padding="10px"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView5"
+                android:layout_toLeftOf="@id/textView5"/>
             <TextView
+                android:id="@id/textView7"
                 android:text="Violet"
                 android:background="@color/Violet"
                 android:textColor="@color/Black"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:padding="10px"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView6"
+                android:layout_toLeftOf="@id/textView6"/>
 
-        </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>

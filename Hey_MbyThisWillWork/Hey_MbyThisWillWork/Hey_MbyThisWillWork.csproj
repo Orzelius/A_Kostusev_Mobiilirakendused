@@ -72,6 +72,10 @@
     <Compile Include="Scripts\Color\Color1.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Relative\Rel0.cs" />
+    <Compile Include="Scripts\Relative\Rel1.cs" />
+    <Compile Include="Scripts\Relative\Rel2.cs" />
+    <Compile Include="Scripts\toolbar.cs" />
     <Compile Include="Scripts\xamarinEssentials.cs" />
     <Compile Include="SecondActivity.cs" />
   </ItemGroup>
@@ -141,8 +145,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Colorful Activities Scripts\" />
-    <Folder Include="Resources\layout\color_layouts\" />
-    <Folder Include="Resources\layout\relative_rainbows\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\relative0.xml">
@@ -157,6 +159,16 @@
   <ItemGroup>
     <AndroidResource Include="Resources\layout\relative2.xml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\toolbar.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\toolbarLayout.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
