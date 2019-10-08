@@ -34,7 +34,6 @@ namespace Hey_MbyThisWillWork.Scripts {
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
         }
 
-<<<<<<< HEAD
         protected override void OnStop() {
             base.OnStop();
 
@@ -44,12 +43,6 @@ namespace Hey_MbyThisWillWork.Scripts {
         private void Accelerometer_ShakeDetected(object sender, EventArgs e) {
             Random randonGen = new Random();
             rl.SetBackgroundColor(Android.Graphics.Color.Argb(randonGen.Next(255), randonGen.Next(255), randonGen.Next(255), randonGen.Next(255)));
-            //ColorConverters.FromHsl(randonGen.Next(255), randonGen.Next(255), randonGen.Next(255));
-=======
-        private void Accelerometer_ShakeDetected(object sender, EventArgs e) {
-            Random randonGen = new Random();
-            //rl.BackgroundTintList = Color.FromArgb(randonGen.Next(255), randonGen.Next(255), randonGen.Next(255));
->>>>>>> ed984f4157680b145576b03e444f2666fae865b4
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults) {
