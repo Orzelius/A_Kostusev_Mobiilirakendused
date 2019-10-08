@@ -10,6 +10,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using Android.Graphics.Drawables;
 using Android.Widget;
 using Xamarin.Essentials;
 
@@ -25,31 +26,24 @@ namespace Hey_MbyThisWillWork.Scripts {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.xamarin_essentials);
 
-            Accelerometer.ShakeDetected += Accelerometer_ShakeDetected; ;
-            Accelerometer.Start(SensorSpeed.Default);
+            Accelerometer.ShakeDetected += Accelerometer_ShakeDetected;
+            Accelerometer.Start(SensorSpeed.Game);
 
             rl = (LinearLayout)FindViewById(Resource.Id.backgorund);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
         }
 
-        private void Accelerometer_ShakeDetected(object sender, EventArgs e) {
-            Random randonGen = new Random();
-            rl.BackgroundTintList = Color.FromArgb(randonGen.Next(255), randonGen.Next(255),
-            randonGen.Next(255));
+        protected override void OnStop() {
+            base.OnStop();
+
+            Accelerometer.Stop();
         }
 
-        static Random rand = new Random();
-        public static Color GetRandomColor() {
-            int hue = rand.Next(255);
-            Color color = Color.HSVToColor(
-                new[] {
-            hue,
-            1.0f,
-            1.0f,
-                }
-            );
-            return color;
+        private void Accelerometer_ShakeDetected(object sender, EventArgs e) {
+            Random randonGen = new Random();
+            rl.SetBackgroundColor(Android.Graphics.Color.Argb(randonGen.Next(255), randonGen.Next(255), randonGen.Next(255), randonGen.Next(255)));
+            //ColorConverters.FromHsl(randonGen.Next(255), randonGen.Next(255), randonGen.Next(255));
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults) {
