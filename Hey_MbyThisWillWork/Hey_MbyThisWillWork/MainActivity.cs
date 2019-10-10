@@ -16,7 +16,7 @@ namespace Hey_MbyThisWillWork
 
         Button calculatorButton;
         Button xamarimEssentialsButton;
-        Button toolbarButton;
+        Button listViewButton;
         Button[] colorButtons = new Button[4];
         Button[] relativeColorButtons = new Button[3];
 
@@ -27,7 +27,7 @@ namespace Hey_MbyThisWillWork
 
             calculatorButton = (Button)FindViewById(Resource.Id.calculator);
             xamarimEssentialsButton = (Button)FindViewById(Resource.Id.xamarinEssentialsBtn);
-            toolbarButton = (Button)FindViewById(Resource.Id.toolbarBtn);
+            listViewButton = (Button)FindViewById(Resource.Id.listViewBtn);
 
             
             colorButtons[0] = (Button)FindViewById(Resource.Id.activities_button0);
@@ -50,11 +50,11 @@ namespace Hey_MbyThisWillWork
 
             calculatorButton.Click += CalculatorButton_Click;
             xamarimEssentialsButton.Click += XamarimEssentialsButton_Click;
-            toolbarButton.Click += ToolbarButton_Click;
+            listViewButton.Click += ListViewButton_Click; ;
         }
 
-        private void ToolbarButton_Click(object sender, EventArgs e) {
-            StartActivity(typeof(Scripts.toolbar));
+        private void ListViewButton_Click(object sender, EventArgs e) {
+            StartActivity(typeof(Scripts.viewList));
         }
 
         private void XamarimEssentialsButton_Click(object sender, EventArgs e) {

@@ -23,5 +23,16 @@ namespace Hey_MbyThisWillWork.Scripts {
 
             // Create your application here
         }
+
+        public override bool OnCreateOptionsMenu(IMenu menu) {
+            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item) {
+            string textToShow;
+
+            return base.OnOptionsItemSelected(item);
+        }
     }
 }
