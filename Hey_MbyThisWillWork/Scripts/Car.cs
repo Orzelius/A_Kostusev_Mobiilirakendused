@@ -11,10 +11,10 @@ using Android.Views;
 using Android.Widget;
 
 namespace Hey_MbyThisWillWork.Scripts {
-    class WeatherInfo {
-        public string Name { get; set; }
-        public string Temperature { get; set; }
-        public string windspeed { get; set; }
-        public int MyProperty { get; set; }
+    class Car {
+        public string Model { get; set; }
+        public int ReleaseYear { get; set; }
+        public float FuelUsage { get; set; }
+        public string Color { get; set; }
     }
 }

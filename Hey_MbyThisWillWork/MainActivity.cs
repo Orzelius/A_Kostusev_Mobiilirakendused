@@ -7,6 +7,7 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Hey_MbyThisWillWork.Scripts;
 
 namespace Hey_MbyThisWillWork
 {
@@ -18,7 +19,7 @@ namespace Hey_MbyThisWillWork
         Button xamarimEssentialsButton;
         Button listViewButton;
         Button[] colorButtons = new Button[4];
-        Button[] relativeColorButtons = new Button[3];
+        Button[] relativeColorButtons = new Button[4];
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

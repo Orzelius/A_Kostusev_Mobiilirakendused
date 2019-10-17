@@ -78,7 +78,7 @@
     <Compile Include="Scripts\Relative\Rel2.cs" />
     <Compile Include="Scripts\toolbar.cs" />
     <Compile Include="Scripts\viewList.cs" />
-    <Compile Include="Scripts\WeatherInfo.cs" />
+    <Compile Include="Scripts\Car.cs" />
     <Compile Include="Scripts\xamarinEssentials.cs" />
     <Compile Include="SecondActivity.cs" />
   </ItemGroup>
@@ -141,6 +141,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Faker.Net">
+      <Version>1.1.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
@@ -176,12 +179,12 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\listView.xml">
+    <AndroidResource Include="Resources\layout\listRow.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\WeatherRow.xml">
+    <AndroidResource Include="Resources\layout\listviewView.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
