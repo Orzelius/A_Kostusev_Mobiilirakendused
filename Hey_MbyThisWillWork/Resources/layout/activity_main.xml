@@ -126,15 +126,23 @@
         android:padding="30px"
         android:id="@+id/xamarinEssentialsBtn" />
     <Button
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="2dp"
         android:text="ListView layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minWidth="25px"
         android:minHeight="25px"
         android:padding="30px"
-        android:layout_marginBottom="10px"
         android:id="@+id/listViewBtn"/>
+    <Button
+        android:layout_marginTop="2dp"
+        android:text="Weather with API"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:padding="30px"
+        android:id="@+id/WeatherBtn"/>
 
 </LinearLayout>
 

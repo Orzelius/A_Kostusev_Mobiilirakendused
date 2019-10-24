@@ -10,33 +10,32 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+using Microsoft.CSharp.RuntimeBinder;
+
 namespace Hey_MbyThisWillWork.Scripts {
     [Activity(Label = "viewList")]
-    public class viewList : Activity {
+    public class viewListWeather : Activity {
         ListView _listView;
         private ListView InfoListView;
-        protected override void OnCreate(Bundle savedInstanceState) {
+        protected override async void  OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.listviewView);
+            SetContentView(Resource.Layout.listviewViewWeather);
             Random rnd = new Random();
 
 
             //var items = new string[] { "üks", "kaks", "kolm", "neli" };
-            var items = new List<Car>();
+            string query = "https://www.metaweather.com/api/location/44418/";
 
-            for (int x = 0; x < rnd.Next(20, 40); x++) {
-                items.Add(
-                    new Car() { Model= Faker.Name.Last(), 
-                        FuelUsage = rnd.Next(2,10), Color = Faker.Name.First(), ReleaseYear = rnd.Next(1940,2040)});
-            }
+            var result = await SecondProject.Core.DataService.GetDataService(query);
+            var weather = result as SecondProject.Core.WeatherInfo;
 
-            var ListAdapter = new BasicCarAdapter(this, items);
+
+            var ListAdapter = new BasicWeatherAdapter(this, weather);
 
             InfoListView = (ListView)FindViewById(Resource.Id.demolist);
 
             _listView = FindViewById<ListView>(Resource.Id.listView1);
-            //listView.Adapter = ListAdapter;
             _listView.Adapter = ListAdapter;
         }
 

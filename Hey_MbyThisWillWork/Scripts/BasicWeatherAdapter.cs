@@ -10,26 +10,27 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
+using SecondProject.Core;
 
 namespace Hey_MbyThisWillWork.Scripts {
 
-    class BasicCarAdapter : BaseAdapter<Car> {
+    class BasicWeatherAdapter : BaseAdapter<SecondProject.Core.WeatherInfo> {
 
-        List<Car> _items;
+        SecondProject.Core.WeatherInfo _item;
         Activity _context;
 
-        public BasicCarAdapter(Activity context, List<Car> items) : base() {
+        public BasicWeatherAdapter(Activity context, WeatherInfo item) : base() {
             this._context = context;
-            this._items = items;
+            this._item = item;
         }
 
 
-        public override Car this[int position] {
-            get { return _items[position]; }
+        public override SecondProject.Core.WeatherInfo this[int position] {
+            get { throw new NotImplementedException(); }
         }
 
         public override int Count {
-            get { return _items.Count; }
+            get { return _item.consolidated_weather.Count; }
         }
 
         public override long GetItemId(int position) {
@@ -49,10 +50,10 @@ namespace Hey_MbyThisWillWork.Scripts {
             if(view == null) {
                 view = _context.LayoutInflater.Inflate(Resource.Layout.listRow, null);
             }
-            view.FindViewById<TextView>(Resource.Id.textView1).Text = _items[position].Model;
-            view.FindViewById<TextView>(Resource.Id.textView2).Text = _items[position].ReleaseYear.ToString();
-            view.FindViewById<TextView>(Resource.Id.textView3).Text = _items[position].Color;
-            view.FindViewById<TextView>(Resource.Id.textView4).Text = _items[position].FuelUsage.ToString();
+            view.FindViewById<TextView>(Resource.Id.textView1).Text = _item.consolidated_weather[position].weather_state_name;
+            view.FindViewById<TextView>(Resource.Id.textView2).Text = _item.consolidated_weather[position].wind_direction_compass;
+            view.FindViewById<TextView>(Resource.Id.textView3).Text = _item.consolidated_weather[position].max_temp.ToString();
+            view.FindViewById<TextView>(Resource.Id.textView4).Text = _item.consolidated_weather[position].min_temp.ToString();
             return view;
         }
     }
