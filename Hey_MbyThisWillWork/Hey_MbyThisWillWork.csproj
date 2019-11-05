@@ -205,6 +205,36 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\BMPs\c.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\BMPs\h.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\BMPs\hc.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\BMPs\hr.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\BMPs\lc.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\BMPs\lr.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\BMPs\s.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\BMPs\sl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\BMPs\sn.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Resources\BMPs\t.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.

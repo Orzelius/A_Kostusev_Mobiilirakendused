@@ -30,8 +30,6 @@ namespace Hey_MbyThisWillWork.Scripts {
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item) {
-            string textToShow;
-
             return base.OnOptionsItemSelected(item);
         }
     }

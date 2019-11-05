@@ -16,5 +16,16 @@ namespace SecondProject.Core {
             }
             return (data);
         }
+
+        public static async Task<dynamic> GetLocation(string query) {
+            HttpClient Client = new HttpClient();
+            var response = await Client.GetStringAsync(query);
+
+            dynamic data = null;
+            if (response != null) {
+                data = JsonConvert.DeserializeObject<Location[]>(response);
+            }
+            return (data);
+        }
     }
 }
