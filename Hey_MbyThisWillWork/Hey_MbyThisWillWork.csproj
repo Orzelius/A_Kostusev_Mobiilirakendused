@@ -156,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Colorful Activities Scripts\" />
+    <Folder Include="Resources\drawable\PNGs\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\relative0.xml">
@@ -206,34 +207,34 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\BMPs\c.bmp" />
+    <AndroidResource Include="Resources\drawable\c.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\BMPs\h.bmp" />
+    <AndroidResource Include="Resources\drawable\h.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\BMPs\hc.bmp" />
+    <AndroidResource Include="Resources\drawable\hc.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\BMPs\hr.bmp" />
+    <AndroidResource Include="Resources\drawable\hr.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\BMPs\lc.bmp" />
+    <AndroidResource Include="Resources\drawable\lc.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\BMPs\lr.bmp" />
+    <AndroidResource Include="Resources\drawable\lr.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\BMPs\s.bmp" />
+    <AndroidResource Include="Resources\drawable\s.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\BMPs\sl.bmp" />
+    <AndroidResource Include="Resources\drawable\sl.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\BMPs\sn.bmp" />
+    <AndroidResource Include="Resources\drawable\sn.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Resources\BMPs\t.bmp" />
+    <AndroidResource Include="Resources\drawable\t.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

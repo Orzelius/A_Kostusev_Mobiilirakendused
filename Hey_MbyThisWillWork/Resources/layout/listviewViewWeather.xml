@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="12px">
+    
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -29,57 +30,54 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <GridLayout
+        android:columnCount="4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
+            android:layout_columnWeight="1"
+            android:layout_column="0"
             android:text="State"
             android:textStyle="bold"
             android:textColor="@color/Black"
-            android:layout_weight="1.2"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:height="40dp"
             android:minWidth="25px"
             android:minHeight="25px"
             android:id="@+id/textViewState" />
         <TextView
+            android:layout_columnWeight="1"
+            android:layout_column="1"
             android:layout_marginLeft="4dp"
             android:text="Wind direction"
             android:textStyle="bold"
             android:textColor="@color/Black"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
             android:minWidth="25px"
             android:minHeight="25px"
             android:id="@+id/textViewWindDir" />
         <TextView
+            android:layout_columnWeight="1"
+            android:layout_column="2"
             android:layout_marginLeft="4dp"
             android:text="Min temp"
             android:textStyle="bold"
             android:textColor="@color/Black"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
             android:minWidth="25px"
             android:minHeight="25px"
             android:id="@+id/textViewMinTemp" />
         <TextView
+            android:layout_columnWeight="1"
+            android:layout_column="3"
             android:layout_marginLeft="4dp"
             android:text="Max temp"
             android:textStyle="bold"
             android:textColor="@color/Black"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
             android:minWidth="25px"
             android:minHeight="25px"
-            android:id="@+id/textViewFuelMaxTemp" 
+            android:id="@+id/textViewMaxTemp" 
         />
 
-    </LinearLayout>
+    </GridLayout>
 
     <LinearLayout
         android:layout_marginTop="4dp"
@@ -89,9 +87,10 @@
         android:background="@android:color/darker_gray"
         android:id="@+id/linearLayout1" />
 
-    <ListView
+    <GridView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView1"/>
+        android:columnCount="4"
+        android:layout_height="fill_parent"
+        android:id="@+id/parentView"/>
 
 </LinearLayout>

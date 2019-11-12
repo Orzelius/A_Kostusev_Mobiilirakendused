@@ -33,8 +33,6 @@ namespace Hey_MbyThisWillWork.Scripts {
 
             var ListAdapter = new BasicCarAdapter(this, items);
 
-            InfoListView = (ListView)FindViewById(Resource.Id.demolist);
-
             _listView = FindViewById<ListView>(Resource.Id.listView1);
             //listView.Adapter = ListAdapter;
             _listView.Adapter = ListAdapter;

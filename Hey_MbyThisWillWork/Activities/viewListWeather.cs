@@ -15,8 +15,7 @@ using Microsoft.CSharp.RuntimeBinder;
 namespace Hey_MbyThisWillWork.Scripts {
     [Activity(Label = "viewList")]
     public class viewListWeather : Activity {
-        ListView _listView;
-        private ListView InfoListView;
+        GridView parentView;
         Button search;
         EditText textView;
 
@@ -64,10 +63,8 @@ namespace Hey_MbyThisWillWork.Scripts {
 
             var ListAdapter = new BasicWeatherAdapter(this, weather);
 
-            InfoListView = (ListView)FindViewById(Resource.Id.demolist);
-
-            _listView = FindViewById<ListView>(Resource.Id.listView1);
-            _listView.Adapter = ListAdapter;
+            parentView = FindViewById<GridView>(Resource.Id.parentView);
+            parentView.Adapter = ListAdapter;
         }
     }
 }
