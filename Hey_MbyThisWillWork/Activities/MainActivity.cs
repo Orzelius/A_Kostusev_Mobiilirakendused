@@ -55,11 +55,11 @@ namespace Hey_MbyThisWillWork
         }
 
         private void WeatherBtn_Click(object sender, EventArgs e) {
-            StartActivity(typeof(Scripts.viewListWeather));
+            StartActivity(typeof(viewListWeatherActivity));
         }
 
         private void XamarimEssentialsButton_Click(object sender, EventArgs e) {
-            StartActivity(typeof(Hey_MbyThisWillWork.Scripts.xamarinEssentials));
+            StartActivity(typeof(xamarinEssentialsActivity));
         }
 
         private void Relative_Click2(object sender, EventArgs e) {

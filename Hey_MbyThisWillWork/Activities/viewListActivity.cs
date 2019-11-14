@@ -12,9 +12,8 @@ using Android.Widget;
 
 namespace Hey_MbyThisWillWork.Scripts {
     [Activity(Label = "viewList")]
-    public class viewList : Activity {
+    public class viewListActivity : Activity {
         ListView _listView;
-        private ListView InfoListView;
         protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);
 
