@@ -77,11 +77,11 @@
     <Compile Include="Activities\RelativeActivities\Rel0.cs" />
     <Compile Include="Activities\RelativeActivities\Rel1.cs" />
     <Compile Include="Activities\RelativeActivities\Rel2.cs" />
-    <Compile Include="Activities\toolbarActivity.cs" />
-    <Compile Include="Activities\viewListWeatherActivity.cs" />
-    <Compile Include="Activities\viewListActivity.cs" />
+    <Compile Include="Activities\ToolbarActivity.cs" />
+    <Compile Include="Activities\ViewListWeatherActivity.cs" />
+    <Compile Include="Activities\ViewListActivity.cs" />
     <Compile Include="Classes\Car.cs" />
-    <Compile Include="Activities\xamarinEssentialsActivity.cs" />
+    <Compile Include="Activities\XamarinEssentialsActivity.cs" />
     <Compile Include="Activities\SecondActivity.cs" />
   </ItemGroup>
   <ItemGroup>

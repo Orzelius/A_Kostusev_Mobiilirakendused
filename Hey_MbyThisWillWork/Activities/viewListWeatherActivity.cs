@@ -14,7 +14,7 @@ using Microsoft.CSharp.RuntimeBinder;
 
 namespace Hey_MbyThisWillWork.Scripts {
     [Activity(Label = "viewList")]
-    public class viewListWeatherActivity : Activity {
+    public class ViewListWeatherActivity : Activity {
         GridView parentView;
         Button search;
         EditText textView;

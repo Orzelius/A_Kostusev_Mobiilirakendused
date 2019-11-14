@@ -18,7 +18,7 @@ namespace Hey_MbyThisWillWork.Scripts {
 
 
     [Activity(Label = "xamarinEssentials")]
-    public class xamarinEssentialsActivity : Activity {
+    public class XamarinEssentialsActivity : Activity {
 
         LinearLayout rl;
 

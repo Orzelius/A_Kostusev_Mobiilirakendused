@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Hey_MbyThisWillWork.Scripts {
     [Activity(Label = "toolbar")]
-    public class toolbarActivity : Activity {
+    public class ToolbarActivity : Activity {
         protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.toolbarLayout);
