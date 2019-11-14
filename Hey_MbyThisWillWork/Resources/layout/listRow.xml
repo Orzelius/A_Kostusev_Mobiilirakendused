@@ -12,14 +12,16 @@
         android:id="@+id/weatherRowGrid">
         
         <ImageView
+            android:layout_marginTop="10dp"
             android:layout_columnWeight="1"
             android:layout_column="0"
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="30dp"
             android:id="@+id/svg"/>
 
         <TextView
+            android:layout_marginTop="15dp"
             android:layout_columnWeight="1"
             android:layout_column="1"
             android:text="Text"
@@ -27,6 +29,7 @@
             android:minHeight="25px"
             android:id="@+id/textView2" />
         <TextView
+            android:layout_marginTop="15dp"
             android:layout_columnWeight="1"
             android:layout_column="2"
             android:text="Text"
@@ -34,6 +37,7 @@
             android:minHeight="25px"
             android:id="@+id/textView3" />
         <TextView
+            android:layout_marginTop="15dp"
             android:layout_columnWeight="1"
             android:layout_column="3"
             android:text="Text"

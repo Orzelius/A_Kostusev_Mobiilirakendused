@@ -36,7 +36,8 @@ namespace Hey_MbyThisWillWork.Scripts {
         }
 
         public override long GetItemId(int position) {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return (position);
         }
 
         //public override int Count => throw new NotImplementedException();

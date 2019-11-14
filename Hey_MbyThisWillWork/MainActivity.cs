@@ -17,7 +17,6 @@ namespace Hey_MbyThisWillWork
 
         Button calculatorButton;
         Button xamarimEssentialsButton;
-        Button listViewButton;
         Button WeatherBtn;
         Button[] colorButtons = new Button[4];
         Button[] relativeColorButtons = new Button[4];
@@ -29,7 +28,6 @@ namespace Hey_MbyThisWillWork
 
             calculatorButton = (Button)FindViewById(Resource.Id.calculator);
             xamarimEssentialsButton = (Button)FindViewById(Resource.Id.xamarinEssentialsBtn);
-            listViewButton = (Button)FindViewById(Resource.Id.listViewBtn);
             WeatherBtn = (Button)FindViewById(Resource.Id.WeatherBtn);
 
 
@@ -53,16 +51,11 @@ namespace Hey_MbyThisWillWork
 
             calculatorButton.Click += CalculatorButton_Click;
             xamarimEssentialsButton.Click += XamarimEssentialsButton_Click;
-            listViewButton.Click += ListViewButton_Click;
             WeatherBtn.Click += WeatherBtn_Click;
         }
 
         private void WeatherBtn_Click(object sender, EventArgs e) {
             StartActivity(typeof(Scripts.viewListWeather));
-        }
-
-        private void ListViewButton_Click(object sender, EventArgs e) {
-            StartActivity(typeof(Scripts.viewList));
         }
 
         private void XamarimEssentialsButton_Click(object sender, EventArgs e) {
