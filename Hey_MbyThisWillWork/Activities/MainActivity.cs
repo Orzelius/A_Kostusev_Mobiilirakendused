@@ -8,12 +8,16 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Hey_MbyThisWillWork.Scripts;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace Hey_MbyThisWillWork
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+
 
         Button calculatorButton;
         Button xamarimEssentialsButton;
@@ -23,6 +27,9 @@ namespace Hey_MbyThisWillWork
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            AppCenter.Start("1b20a55e-39c6-4f45-843f-39a646500207",
+                       typeof(Analytics), typeof(Crashes));
+
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 

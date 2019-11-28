@@ -8,6 +8,7 @@ using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using Android.Views.InputMethods;
 using Android.Widget;
 
 using Microsoft.CSharp.RuntimeBinder;
@@ -18,7 +19,7 @@ namespace Hey_MbyThisWillWork.Scripts {
         GridView parentView;
         Button search;
         EditText textView;
-
+        SecondProject.Core.WeatherInfo weather;
 
 
         protected override void  OnCreate(Bundle savedInstanceState) {
@@ -29,8 +30,23 @@ namespace Hey_MbyThisWillWork.Scripts {
             search = (Button)FindViewById(Resource.Id.Search);
             textView = (EditText)FindViewById(Resource.Id.editText1);
 
+            textView.EditorAction += (sender, e) => {
+                if (e.ActionId == ImeAction.Send) {
+                    search.PerformClick();
+                }
+                else {
+                    e.Handled = false;
+                }
+            };
+
             textView.Click += TextView_Click;
             search.Click += Search_Click;
+        }
+
+        private void ParentView_ItemClick(object sender, AdapterView.ItemClickEventArgs e) {
+            Toast.MakeText(Application.Context, e.Position.ToString() + " was clicked on", ToastLength.Long).Show();
+
+            var weatherDetail = weather.consolidated_weather[e.Position];
         }
 
         private void Search_Click(object sender, EventArgs e) {
@@ -39,10 +55,6 @@ namespace Hey_MbyThisWillWork.Scripts {
 
         private void TextView_Click(object sender, EventArgs e) {
             textView.Text = "";
-        }
-
-        private void InfoListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e) {
-            throw new NotImplementedException();
         }
 
         public async void setAdapter(string location) {
@@ -58,13 +70,15 @@ namespace Hey_MbyThisWillWork.Scripts {
             string query = "https://www.metaweather.com/api/location/" + locationsArr[0].Woeid;
 
             var result = await SecondProject.Core.DataService.GetDataService(query);
-            var weather = result as SecondProject.Core.WeatherInfo;
+            weather = result as SecondProject.Core.WeatherInfo;
 
 
             var ListAdapter = new BasicWeatherAdapter(this, weather);
 
             parentView = FindViewById<GridView>(Resource.Id.parentView);
             parentView.Adapter = ListAdapter;
+
+            parentView.ItemClick += ParentView_ItemClick;
         }
     }
 }

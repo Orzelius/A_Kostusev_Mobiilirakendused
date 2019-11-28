@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\WeatherDetailActivity.cs" />
     <Compile Include="Classes\BasicWeatherAdapter.cs" />
     <Compile Include="Classes\BasicAdapter.cs" />
     <Compile Include="Activities\ColorActivities\Color3.cs" />
@@ -79,7 +80,6 @@
     <Compile Include="Activities\RelativeActivities\Rel2.cs" />
     <Compile Include="Activities\ToolbarActivity.cs" />
     <Compile Include="Activities\ViewListWeatherActivity.cs" />
-    <Compile Include="Activities\ViewListActivity.cs" />
     <Compile Include="Classes\Car.cs" />
     <Compile Include="Activities\XamarinEssentialsActivity.cs" />
     <Compile Include="Activities\SecondActivity.cs" />
@@ -146,6 +146,12 @@
     <PackageReference Include="Faker.Net">
       <Version>1.1.1</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>2.6.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>2.6.1</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.CSharp">
       <Version>4.6.0</Version>
     </PackageReference>
@@ -190,11 +196,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\listviewView.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SecondProject.Core\SecondProject.Core.csproj">
       <Project>{08b763fe-5d04-49b2-b280-bd9531348b44}</Project>
       <Name>SecondProject.Core</Name>
@@ -235,6 +236,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\WeatherDetailLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
