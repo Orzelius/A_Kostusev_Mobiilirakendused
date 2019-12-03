@@ -12,6 +12,7 @@ using Android.Views.InputMethods;
 using Android.Widget;
 
 using Microsoft.CSharp.RuntimeBinder;
+using Newtonsoft.Json;
 
 namespace Hey_MbyThisWillWork.Scripts {
     [Activity(Label = "viewList")]
@@ -47,6 +48,10 @@ namespace Hey_MbyThisWillWork.Scripts {
             Toast.MakeText(Application.Context, e.Position.ToString() + " was clicked on", ToastLength.Long).Show();
 
             var weatherDetail = weather.consolidated_weather[e.Position];
+
+            var intent = new Intent(this, typeof(Activities.WeatherDetailActivity));
+            intent.PutExtra("weatherDetails", JsonConvert.SerializeObject(weatherDetail));
+            StartActivity(intent);
         }
 
         private void Search_Click(object sender, EventArgs e) {

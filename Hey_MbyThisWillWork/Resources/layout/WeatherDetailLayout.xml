@@ -1,7 +1,127 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:paddingStart="18dp"
     android:layout_height="match_parent">
+
+    <TextView
+        android:text="Medium Text"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Title" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:id="@+id/weatherRowGrid">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_columnWeight="0.5"
+            android:layout_column="0"
+            android:textColor="@color/Black"
+            android:text="Maximum temp:"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:gravity="left"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_columnWeight="1"
+            android:textColor="@color/Black"
+            android:layout_column="1"
+            android:text="Text"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:gravity="left"
+            android:id="@+id/maxTemp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_columnWeight="0.5"
+            android:layout_column="0"
+            android:textColor="@color/Black"
+            android:text="Minimum temp:"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:gravity="left"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_columnWeight="1"
+            android:textColor="@color/Black"
+            android:layout_column="1"
+            android:text="Text"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:gravity="left"
+            android:id="@+id/minTemp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_columnWeight="0.5"
+            android:layout_column="0"
+            android:textColor="@color/Black"
+            android:text="Wind speed:"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:gravity="left"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_columnWeight="1"
+            android:textColor="@color/Black"
+            android:layout_column="1"
+            android:text="Text"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:gravity="left"
+            android:id="@+id/windSpeed" />
+
+
+                <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_columnWeight="0.5"
+            android:layout_column="0"
+            android:textColor="@color/Black"
+            android:text="Wind direction:"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:gravity="left"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_columnWeight="1"
+            android:textColor="@color/Black"
+            android:layout_column="1"
+            android:text="Text"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:gravity="left"
+            android:id="@+id/windDirection" />
+    </GridLayout>
+
+
+
 
 </LinearLayout>
